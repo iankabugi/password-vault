@@ -30,9 +30,9 @@ class User:
             Returns :
             users of person that matches that appname.
             '''
-            for users in cls.user_list:
+            for User in cls.user_list:
                 if User.app_name == name:
-                    return users
+                    return User
     @classmethod
     def user_exist(cls,appname):
         '''
