@@ -55,9 +55,9 @@ if __name__ == '__main__':
         the application name and display information
         '''
         self.new_user.save_newuser()
-        test_user = users("newapp","testuser","testpass")
+        test_user = User("newapp","testuser","testpass")
         test_user.save_newuser()
-        found_user = users.find_userbyappname("newapp")
+        found_user = User.find_userbyappname("newapp")
         self.assertEqual(found_user.account_name,test_user.account_name)
     def test_user_exists(self):
         '''
@@ -65,13 +65,13 @@ if __name__ == '__main__':
         if a user cannot be found
         '''
         self.new_user.save_newuser()
-        test_user = users("newapp","testuser","testpass")
+        test_user = User("newapp","testuser","testpass")
         test_user.save_newuser()
-        user_exists = users.user_exist("newapp")
+        user_exists = User.user_exist("newapp")
         self.assertTrue(user_exists)
     def test_display_allusers(self):
         '''
         test for method that returns 
         all users saved
         '''
-        self.assertEqual(users.display_allusers(),users.user_list)
+        self.assertEqual(User.display_allusers(),User.user_list)
