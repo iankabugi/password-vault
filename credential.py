@@ -11,15 +11,15 @@ class Credential:
         save_credential method saves credential objects into credential_list
         '''
 
-        credential.credential_list.append(self)
+        Credential.credential_list.append(self)
 
-    def __init__(self,first_name,last_name,username,number,email):
+    def __init__(self,first_name,last_name,user_name,number,email):
 
       # docstring removed for simplicity
 
         self.first_name = first_name
         self.last_name = last_name
-        self.username = username
+        self.user_name = user_name
         self.phone_number = number
         self.email = email
 #code to delete credential      
@@ -29,7 +29,7 @@ class Credential:
         delete_credential method deletes a saved credential from the credential_list
         '''
 
-        credential.credential_list.remove(self) 
+        Credential.credential_list.remove(self) 
     @classmethod
     def find_by_number(cls,number):
         '''
