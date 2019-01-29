@@ -15,23 +15,23 @@ class User:
         self.user_name = user_name
         self.account_password= account_password
     def save_newuser(self):
-        users.user_list.append(self)
+        User.user_list.append(self)
     def deleteuser(self):
         '''
         delete a user from user list
         '''
-        users.user_list.remove(self)
+        User.user_list.remove(self)
     @classmethod
     def find_userbyappname(cls,name):
             '''Method that takes in appname and returns a user
             that matches that appname.
             Args:
-            appname TO SEARCH FOR 
+            appname to search for
             Returns :
             users of person that matches that appname.
             '''
             for users in cls.user_list:
-                if users.app_name == name:
+                if User.app_name == name:
                     return users
     @classmethod
     def user_exist(cls,appname):
