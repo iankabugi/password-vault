@@ -47,8 +47,7 @@ class TestUser(unittest.TestCase):
         test_user.save_newuser()
         self.new_user.deleteuser()
         self.assertEqual(len(User.user_list),1)
-if __name__ == '__main__':
-    unittest.main()
+
     def test_find_userbyappname(self):
         '''
         test to check if we can find a user by using
@@ -58,7 +57,7 @@ if __name__ == '__main__':
         test_user = User("newapp","testuser","testpass")
         test_user.save_newuser()
         found_user = User.find_userbyappname("newapp")
-        self.assertEqual(found_user.account_name,test_user.account_name)
+        self.assertEqual(found_user.user_name,test_user.user_name)
     def test_user_exists(self):
         '''
         test to check if we can get a boolean 
@@ -75,3 +74,5 @@ if __name__ == '__main__':
         all users saved
         '''
         self.assertEqual(User.display_allusers(),User.user_list)
+if __name__ == '__main__':
+    unittest.main()
