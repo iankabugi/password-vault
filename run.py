@@ -35,4 +35,20 @@ def display_credentials():
     '''
     return Credential.display_contacts()
 ##user
-def create_user(app_name,user_name,password)
+def create_user(a_name,u_name,pas):
+    '''
+    Function to create a new user
+    '''
+    new_user = User(a_name,u_name,pas)
+    return new_user
+##main funcio
+def main():
+    print("Hello Welcome to *PASSWORD_VAULT*. What is your name?")
+    person= input()
+
+    print(f"Hello {person}. what would you like to do?")
+    print('\n')
+
+if __name__ == '__main__':
+
+    main()
