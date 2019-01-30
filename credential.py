@@ -1,3 +1,6 @@
+import string
+import secrets
+import random
 class Credential:
     """
     Class that generates new instances of credentials.
@@ -13,7 +16,7 @@ class Credential:
 
         Credential.credential_list.append(self)
 
-    def __init__(self,first_name,last_name,user_name,number,email):
+    def __init__(self,first_name,last_name,user_name,number,email,password):
 
       # docstring removed for simplicity
 
@@ -22,6 +25,7 @@ class Credential:
         self.user_name = user_name
         self.phone_number = number
         self.email = email
+        self.password= password
 #code to delete credential      
     def delete_credential(self):
 
@@ -64,4 +68,17 @@ class Credential:
         method that returns the credential list
         '''
         return cls.credential_list  
-   
+     def generate_randompass():
+        '''method to generate a random password
+         which should have an uppercase letter,lowercase,digit 
+         and punctuation mark
+         password length=8 letters
+        '''
+        #password should contain a capital letter,small letter,digit and a punctuation
+        characters = string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation
+        #length of the password
+        passlength = random.randint(8,16)
+        #randomly joins the characters
+        pass_word = ''.join(secrets.choice(characters) for x in range(passlength))
+        ##return or print the generated password
+        return pass_word
