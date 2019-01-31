@@ -16,9 +16,9 @@ class TestUser(unittest.TestCase):
         '''
         to test if object is initialised properly
         '''
-        self.assertEqual(self.new_user.app_name,"twitter")
-        self.assertEqual(self.new_user.user_name,"iankabugi")
-        self.assertEqual(self.new_user.account_password,"1234pass")
+        self.assertEqual(self.new_user.a_name,"twitter")
+        self.assertEqual(self.new_user.u_name,"iankabugi")
+        self.assertEqual(self.new_user.password,"1234pass")
 
     def test_save_newuser(self):
         '''

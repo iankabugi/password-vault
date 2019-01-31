@@ -76,9 +76,7 @@ class Credential:
         '''
         #password should contain a capital letter,small letter,digit and a punctuation
         characters = string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation
-        #length of the password
         passlength = random.randint(8,16)
-        #randomly joins the characters
-        pass_word = ''.join(secrets.choice(characters) for x in range(passlength))
+        password = ''.join(secrets.choice(characters) for x in range(passlength))
         ##return or print the generated password
         return pass_word

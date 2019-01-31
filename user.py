@@ -4,17 +4,19 @@ import random
 class User:
     '''
     Class that generates new instance of a user
-    creates a password
     '''
     user_list = []
-    def __init__(self,app_name,user_name,account_password):
+    def __init__(self,a_name,u_name,password):
         '''
         initialises a new instance of a user
         '''
-        self.app_name = app_name
-        self.user_name = user_name
-        self.account_password= account_password
+        self.app_name = a_name
+        self.user_name = u_name
+        self.password= password
     def save_newuser(self):
+        '''
+        save new user
+        '''
         User.user_list.append(self)
     def deleteuser(self):
         '''
@@ -50,6 +52,6 @@ class User:
         '''
         return cls.user_list
     @classmethod
-    def copy_account_password(cls,appname):
+    def copy_password(cls,appname):
         user_found = users.find_userbyappname(appname)
-        pyperclip.copy(user_found.account_password)
+        pyperclip.copy(user_found.password)
