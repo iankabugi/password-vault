@@ -68,11 +68,11 @@ class Credential:
         method that returns the credential list
         '''
         return cls.credential_list  
-     def generate_randompass():
+    def generate_randompass():
         '''method to generate a random password
-         which should have an uppercase letter,lowercase,digit 
-         and punctuation mark
-         password length=8 letters
+            which should have an uppercase letter,lowercase,digit 
+            and punctuation mark
+            password length=8 letters
         '''
         #password should contain a capital letter,small letter,digit and a punctuation
         characters = string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation

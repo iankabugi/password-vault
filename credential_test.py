@@ -102,10 +102,10 @@ class Testcredential(unittest.TestCase):
          and returns a string
         '''
 
-        self.new_user.save_user()
-        test_user = User("Test","user","testuser","0711223344","test@user.com","testpassword")
-        test_user.save_user()
-        randompass_generated = User.generate_randompass()
+        self.new_credential.save_credential()
+        test_credential = Credential("Test","user","testuser","0711223344","test@user.com","testpassword")
+        test_credential.save_credential()
+        randompass_generated = Credential.generate_randompass()
         self.assertEqual(str(randompass_generated),str(randompass_generated))
 if __name__ == '__main__':
     unittest.main()    
