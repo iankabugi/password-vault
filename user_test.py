@@ -57,7 +57,7 @@ class TestUser(unittest.TestCase):
         test_user = User("newapp","testuser","testpass")
         test_user.save_newuser()
         found_user = User.find_userbyappname("newapp")
-        self.assertEqual(found_user.user_name,test_user.user_name)
+        self.assertEqual(found_user.u_name,test_user.u_name)
     def test_user_exists(self):
         '''
         test to check if we can get a boolean 
