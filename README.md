@@ -24,37 +24,25 @@ This a simple app that makes it easier to store login credentials
     (this is running the app in the terminal)
 
 ## BDD
-* The program should ask for user's username and password when **ca**(create account) is entered:
+* The program should ask for user's details first name,lastname,username and password when **ca** is entered:
 
      **Input Example**: Enter **ca**
 
-     **Output Example**: What is your username?
+     **Output Example**: What is your first name?......
 
-     **Output Example**: What is your password?
 
-* The program should authenticate the account by asking the user to login again when **cc**(create credential) is entered:
+* The program should authenticate the account by asking the user to login again when **lg**(create credential) is entered:
+
+     **Input Example**: Enter **lg**
+
+     **Output Example**: Enter your Username?...
+
+* The program should create credentials when **cc**(create users) is entered:
 
      **Input Example**: Enter **cc**
 
-     **Output Example**: Login to your account. Username?
+     **Output Example**: username
 
-* The program should create credentials when **cc**(create credential) is entered:
-
-     **Input Example**: Enter **cc**
-
-     **Output Example**: Enter the account name
-
-* The program should generate a random 8 characters long password when **gp**(generate password) is entered:
-
-     **Input Example**: Enter **gp**
-
-     **Output Example**: Your password is: ht43iphw
-
-* The program should let the user create their own password when **cp**(create password) is entered:
-
-     **Input Example**: Enter **cp**
-
-     **Output Example**: Enter your password
 
 * The program should display the credentials when **dc**(display credentials) is entered:
 
@@ -66,28 +54,28 @@ This a simple app that makes it easier to store login credentials
 
      **Input Example**: Enter **ex**
 
-     **Output Example**: Thank you for using Password locker...
+     **Output Example**: Goodbye...
 
 ## Known Bugs
   
-  No bugs yet,but if you should come across any feel free to give me your feedback, my contacts are below
+  none at the time of development
 
 ## Technologies
 
- Python
- git
+* Python
+* git
 
 ### Support and contact details
 
-email: iank299@gmail.com
-Tel: +254703456965
-githubusername: iankabugi
+* email: iank299@gmail.com
+* Tel: +254703456965
+* githubusername: iankabugi
 
 ### License
 
-MIT License
+                        MIT License
 
-Copyright (c) [2019] [Ian Kabugi]
+        Copyright (c) [2019] [Ian Kabugi]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

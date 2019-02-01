@@ -192,6 +192,11 @@ def main():
                 
                 print("Email ")
                 email = input()
+
+                chars = "abcdefghijklmnopqrstuvwxyz1234567890"
+                password = "".join(random.choice(chars) for _ in range(8))
+                print(f"\nYour password is: **{password}**")
+
                 save_credential(create_credential(fname,lname,uname,pnumber,email,password))
                 print('\n')
                 print(f"New Account {uname} successfully created!")
@@ -210,12 +215,12 @@ def main():
                     print("Password")
                     pass_wordin = input()
                     ###verifying the username and password
-                    if user_namein == u_name and pass_wordin == password:
-                        print("Correct username and password.\n To proceed use the following shortcodes: \n cc - create a new credential \n dc - display user \n fc - find a credential by inputing the appname \n rc - to delete a credential \n ex - exit the application")
+                    if user_namein == uname and pass_wordin == password:
+                        print("*ACCESS GRANTED*.\n To proceed use the following shortcodes: \n cc - create a new credential \n dc - display user \n fc - find a credential by inputing the appname \n rc - to delete a credential \n ex - exit the application")
                         short_codethree = input().lower()
                         if short_codethree == 'cc':
                             print("-"*10)
-                            print("To create a new Credential,Input the following.")
+                            print("To create a new user,Input the following.")
                             print("-"*10)
 
                             print("Application Name")
@@ -260,14 +265,14 @@ def main():
                         print("Wrong username or password.Please try again.")
                     
                 elif short_codetwo == 'ex':
-                    print("Bye Bye!")
+                    print("Goodbye!")
                     break
                 else:
                     print("I really didn't get that.Please use the short codes")
                     break
                 
             elif short_code == "ex":
-                print("Bye Bye!")
+                print("Goodbye!")
                 break
             else:
                 print("I really didn't get that.Please use the short codes")
